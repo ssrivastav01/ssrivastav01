@@ -252,6 +252,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*****Portfolio section****** /
+/* Disable horizontal scroll on the entire page */
+body {
+  overflow-x: hidden;
+}
+
+/* Update portfolio section to prevent horizontal scrolling */
+.portfolio-scroll-container {
+  display: flex;
+  flex-wrap: wrap; /* Wraps items on new lines instead of scrolling horizontally */
+  justify-content: center; /* Center aligns items within the container */
+  gap: 20px; /* Adds space between items */
+  padding: 20px;
+  overflow-x: hidden; /* Ensure no horizontal scrolling */
+}
+
+/* Make portfolio items responsive */
+.portfolio-item {
+  flex: 1 1 250px; /* Set a base width but allow items to grow/shrink */
+  max-width: 250px; /* Prevents items from growing too large */
+  margin: 10px;
+}
+
 /* Portfolio Section Title */
 .section-title {
   text-align: center;
@@ -316,15 +338,6 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: underline;
 }
 
-/* Keyframe animation for continuous scroll */
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
 
 /* Contact Form */
 .contact .form-control {
