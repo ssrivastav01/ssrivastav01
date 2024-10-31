@@ -1,0 +1,483 @@
+/*--------------------------------------------------------------
+# Font & Color Variables
+--------------------------------------------------------------*/
+/* System Fonts */
+:root {
+  --default-font: Arial, sans-serif;
+  --heading-font: Arial, sans-serif;
+  --nav-font: Arial, sans-serif;
+}
+
+/* General Styling */
+body {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-family: var(--default-font);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a i {
+  color: var(--contrast-color);
+}
+
+a:hover {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+
+/*--------------------------------------------------------------
+# Global Colors
+--------------------------------------------------------------*/
+:root {
+  --background-color: #000000;
+  --default-color: #fafafa;
+  --heading-color: #ffffff;
+  --accent-color: #27a776;
+  --surface-color: #1a1a1a;
+  --contrast-color: #ffffff;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Navigation Menu (Updated for side-by-side layout)
+--------------------------------------------------------------*/
+.navmenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* This makes the list items display in a row */
+  justify-content: center; /* Center aligns the items horizontally */
+}
+
+.navmenu ul li {
+  margin: 0 15px; /* Adds space between the items */
+}
+
+.navmenu a {
+  color: var(--nav-color);
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center aligns text within each link */
+  padding: 10px 18px;
+  font-size: 15px;
+  border-radius: 50px;
+  background: color-mix(in srgb, var(--default-color), transparent 92%);
+  height: 56px;
+  text-align: center; /* Ensure text is centered */
+  width: auto; /* Prevents the items from expanding to full width */
+}
+
+.navmenu a:hover {
+  color: var(--contrast-color);
+  background: var(--nav-hover-color);
+}
+
+
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: Dark overlay */
+  color: white;
+}
+
+
+.hero .background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  opacity: 0.3; /* Set the opacity for the video */
+}
+
+.hero .container {
+  position: relative;
+  z-index: 3;
+}
+
+.hero h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  margin-top: 20px;
+}
+
+.social-links a {
+  margin-right: 15px;
+  font-size: 2rem;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--accent-color); /* Accent color on hover */
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .social-links a {
+    font-size: 1.5rem;
+  }
+}
+.skills .section-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.skills-icons-container {
+  display: flex;
+  justify-content: space-around; /* This will evenly space the icons */
+  flex-wrap: wrap; /* Wraps items on small screens */
+  padding: 20px 0;
+}
+
+.skill-item {
+  text-align: center;
+  flex: 1;
+  margin: 0 20px; /* Adds space between each skill */
+}
+
+.skill-item h4 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.skill-item p {
+  font-size: 14px;
+  color: #666;
+}
+
+.skill-icon {
+  font-size: 3.5rem;
+  color: #27a776;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .skills-icons-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .skill-item {
+    margin-bottom: 20px;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Resume Section
+--------------------------------------------------------------*/
+/* Adjust the Resume Section for Side-by-Side Layout */
+.resume .container .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.resume .container .col-lg-6 {
+  padding: 20px;
+}
+
+.resume .resume-item {
+  border-left: 2px solid var(--accent-color);
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+}
+
+.resume .resume-item h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--heading-color);
+}
+
+.resume .resume-item h5 {
+  font-size: 16px;
+  padding: 5px 15px;
+  color: var(--default-color);
+}
+
+.resume .resume-item ul {
+  padding-left: 20px;
+  color: var(--default-color);
+}
+
+.resume .resume-item ul li {
+  padding-bottom: 10px;
+  color: var(--default-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .resume .container .col-lg-6 {
+    width: 100%; /* Make columns full width on smaller screens */
+  }
+}
+
+/*****Portfolio section****** /
+/* Portfolio Section Title */
+.section-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Wrapper for Scrolling Effect */
+.portfolio-loop-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.portfolio-scroll-container {
+  display: inline-flex;
+  animation: scroll 40s linear infinite; /* Slower animation */
+}
+
+.portfolio-item {
+  display: inline-block;
+  width: 250px;
+  margin-right: 20px;
+  border-radius: 10px;
+  background-color: #1a1a1a;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  text-align: center;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.portfolio-info h4 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  margin: 10px 0 8px;
+}
+
+.portfolio-info p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.portfolio-info a {
+  color: #27a776;
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.portfolio-info a:hover {
+  color: #1e835b;
+  text-decoration: underline;
+}
+
+/* Keyframe animation for continuous scroll */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Contact Form */
+.contact .form-control {
+  width: 100%; /* Consistent width for form fields */
+  max-width: 500px; /* Optional: limit the max width */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.contact button[type="submit"] {
+  background-color: #27a776;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.contact button[type="submit"]:hover {
+  background-color: #1e835b;
+}
+
+/* Contact Info */
+.contact .info-item {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.contact .info-item i {
+  font-size: 24px; /* Adjust icon size */
+  color: var(--accent-color); /* Icon color */
+  background: var(--surface-color); /* Icon background */
+  padding: 15px;
+  border-radius: 50%; /* Circular icon style */
+  margin-right: 15px; /* Space between icon and text */
+}
+
+.contact .info-item p {
+  margin-bottom: 0;
+  font-size: 16px; /* Adjust text size */
+  color: var(--default-color); /* Text color for better readability */
+}
+
+.contact .info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Add space between contact details */
+}
+
+.contact .info-item p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Make the entire contact section responsive */
+@media (max-width: 768px) {
+  .contact .info-item i {
+    font-size: 20px; /* Smaller icons on mobile */
+    padding: 10px;
+  }
+
+  .contact .form-control {
+    max-width: 100%; /* Full width form fields on smaller screens */
+  }
+}
+/* Counter Section */
+.counters {
+  padding: 50px 0;
+  background-color: #000; /* You can change this to fit your background */
+}
+
+.counter-box {
+  margin: 0 10px;
+  padding: 20px;
+  background: #1a1a1a;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.counter-box i {
+  font-size: 40px; /* Smaller icon size */
+  color: #27a776; /* Accent color for icons */
+  margin-bottom: 10px;
+}
+
+.counter-box .counter {
+  font-size: 36px; /* Counter number size */
+  font-weight: bold;
+  color: #fff;
+}
+
+.counter-box p {
+  font-size: 16px; /* Description size */
+  color: #ccc;
+}
+
+.counters .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap; /* Ensures they stay in a single row */
+}
+
+@media (max-width: 768px) {
+  .counters .row {
+    flex-wrap: wrap; /* Stack on smaller screens */
+  }
+  .counter-box {
+    margin-bottom: 20px;
+  }
+}
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.footer {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  text-align: center;
+  padding: 30px 0;
+}
+
+.footer h3 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.footer .social-links a {
+  font-size: 16px;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  margin: 0 4px;
+}
+
+.footer .social-links a:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 25%);
+}
+
+.footer .copyright {
+  padding-top: 25px;
+  border-top: 1px solid var(--default-color);
+}
